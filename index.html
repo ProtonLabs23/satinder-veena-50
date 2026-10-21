@@ -408,6 +408,9 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
 
 
 /* ===== decorated intro ===== */
+.knocker{position:absolute;bottom:16%;width:30px;z-index:2;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+.door.left .knocker{right:8px}
+.door.right .knocker{left:8px}
 .door .door-art{position:absolute;inset:0;width:100%;height:100%}
 .door::before{display:none}
 .intro-deco{position:absolute;inset:0;pointer-events:none;z-index:1;transition:opacity .6s ease}
@@ -539,7 +542,7 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
 
 <!-- ============ INTRO ============ -->
 <div class="intro" id="intro" role="dialog" aria-label="Invitation cover">
-  <div class="door left">
+  <div class="door left"><svg class="knocker" viewBox="-18 -24 36 42" aria-hidden="true"><circle r="14" fill="none" stroke="url(#bellG)" stroke-width="3"/><circle cy="-16" r="5" fill="url(#bellG)"/></svg>
     <svg class="door-art" viewBox="0 0 300 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <rect x="22" y="22" width="256" height="756" rx="4" fill="none" stroke="rgba(246,196,83,.55)" stroke-width="1.5"/>
       <rect x="32" y="32" width="236" height="736" rx="2" fill="none" stroke="rgba(246,196,83,.3)" stroke-width="1" stroke-dasharray="2 5"/>
@@ -550,13 +553,9 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
         <use href="#paisley" transform="translate(66 718) rotate(-150) scale(.9)"/>
       </g>
       <g fill="rgba(246,196,83,.5)"><circle cx="44" cy="150" r="1.6"/><circle cx="44" cy="168" r="1.6"/><circle cx="44" cy="186" r="1.6"/><circle cx="44" cy="204" r="1.6"/><circle cx="44" cy="222" r="1.6"/><circle cx="44" cy="240" r="1.6"/><circle cx="44" cy="258" r="1.6"/><circle cx="44" cy="276" r="1.6"/><circle cx="44" cy="294" r="1.6"/><circle cx="44" cy="312" r="1.6"/><circle cx="44" cy="330" r="1.6"/><circle cx="44" cy="348" r="1.6"/><circle cx="44" cy="366" r="1.6"/><circle cx="44" cy="384" r="1.6"/><circle cx="44" cy="402" r="1.6"/><circle cx="44" cy="420" r="1.6"/><circle cx="44" cy="438" r="1.6"/><circle cx="44" cy="456" r="1.6"/><circle cx="44" cy="474" r="1.6"/><circle cx="44" cy="492" r="1.6"/><circle cx="44" cy="510" r="1.6"/><circle cx="44" cy="528" r="1.6"/><circle cx="44" cy="546" r="1.6"/><circle cx="44" cy="564" r="1.6"/><circle cx="44" cy="582" r="1.6"/><circle cx="44" cy="600" r="1.6"/><circle cx="44" cy="618" r="1.6"/><circle cx="44" cy="636" r="1.6"/><circle cx="44" cy="654" r="1.6"/><circle cx="44" cy="672" r="1.6"/></g>
-      <g transform="translate(272 420)">
-        <circle r="14" fill="none" stroke="url(#bellG)" stroke-width="3"/>
-        <circle cy="-16" r="5" fill="url(#bellG)"/>
-      </g>
     </svg>
   </div>
-  <div class="door right">
+  <div class="door right"><svg class="knocker" viewBox="-18 -24 36 42" aria-hidden="true"><circle r="14" fill="none" stroke="url(#bellG)" stroke-width="3"/><circle cy="-16" r="5" fill="url(#bellG)"/></svg>
     <svg class="door-art" viewBox="0 0 300 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="transform:scaleX(-1)">
       <rect x="22" y="22" width="256" height="756" rx="4" fill="none" stroke="rgba(246,196,83,.55)" stroke-width="1.5"/>
       <rect x="32" y="32" width="236" height="736" rx="2" fill="none" stroke="rgba(246,196,83,.3)" stroke-width="1" stroke-dasharray="2 5"/>
@@ -567,10 +566,6 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
         <use href="#paisley" transform="translate(66 718) rotate(-150) scale(.9)"/>
       </g>
       <g fill="rgba(246,196,83,.5)"><circle cx="44" cy="150" r="1.6"/><circle cx="44" cy="168" r="1.6"/><circle cx="44" cy="186" r="1.6"/><circle cx="44" cy="204" r="1.6"/><circle cx="44" cy="222" r="1.6"/><circle cx="44" cy="240" r="1.6"/><circle cx="44" cy="258" r="1.6"/><circle cx="44" cy="276" r="1.6"/><circle cx="44" cy="294" r="1.6"/><circle cx="44" cy="312" r="1.6"/><circle cx="44" cy="330" r="1.6"/><circle cx="44" cy="348" r="1.6"/><circle cx="44" cy="366" r="1.6"/><circle cx="44" cy="384" r="1.6"/><circle cx="44" cy="402" r="1.6"/><circle cx="44" cy="420" r="1.6"/><circle cx="44" cy="438" r="1.6"/><circle cx="44" cy="456" r="1.6"/><circle cx="44" cy="474" r="1.6"/><circle cx="44" cy="492" r="1.6"/><circle cx="44" cy="510" r="1.6"/><circle cx="44" cy="528" r="1.6"/><circle cx="44" cy="546" r="1.6"/><circle cx="44" cy="564" r="1.6"/><circle cx="44" cy="582" r="1.6"/><circle cx="44" cy="600" r="1.6"/><circle cx="44" cy="618" r="1.6"/><circle cx="44" cy="636" r="1.6"/><circle cx="44" cy="654" r="1.6"/><circle cx="44" cy="672" r="1.6"/></g>
-      <g transform="translate(272 420)">
-        <circle r="14" fill="none" stroke="url(#bellG)" stroke-width="3"/>
-        <circle cy="-16" r="5" fill="url(#bellG)"/>
-      </g>
     </svg>
   </div>
   <div class="intro-deco" aria-hidden="true">
