@@ -468,6 +468,26 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
 .balloons span::after{content:"";position:absolute;left:50%;top:100%;width:1px;height:34px;background:rgba(122,31,31,.35)}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
 
+
+/* ===== dress code ===== */
+.card-dress{margin:14px auto 0;max-width:330px;font-family:"Cormorant Garamond",serif;font-size:clamp(13px,3.5vw,16px);color:var(--ink);line-height:1.45;
+  padding:8px 10px;border-top:1px solid rgba(200,146,58,.55);border-bottom:1px solid rgba(200,146,58,.55)}
+.cdr{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;margin-top:4px}
+.cdr > div + div{border-left:1px solid rgba(200,146,58,.45)}
+.cdr b{display:block;font-family:"Cinzel",serif;font-weight:500;font-size:9.5px;letter-spacing:.16em;color:var(--muted);margin-bottom:1px}
+.card-dress span{display:block;font-family:"Cinzel",serif;font-size:10px;letter-spacing:.3em;color:var(--vermilion);margin-bottom:2px;padding-left:.3em}
+.revealed .stagger > *:nth-child(9){transition-delay:3.9s}
+.dress-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.dress-tile{background:linear-gradient(180deg,#fffdf7,#fbf0dc);border:1.5px solid rgba(200,146,58,.45);border-radius:80px 80px 12px 12px;
+  padding:22px 6px 16px;position:relative;box-shadow:0 16px 30px -22px rgba(122,31,31,.55)}
+.dress-tile::before{content:"";position:absolute;inset:5px;border-radius:74px 74px 8px 8px;border:1px dashed rgba(200,146,58,.4);pointer-events:none}
+.dress-icon{width:62px;height:82px;margin:0 auto 8px}
+.dress-icon svg{width:100%;height:100%;overflow:visible}
+.dress-tile:hover .dress-icon{animation:bob 2s ease-in-out infinite}
+.dress-who{font-family:"Cinzel",serif;font-size:11px;letter-spacing:.22em;color:var(--vermilion);padding-left:.22em}
+.dress-what{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(21px,5.6vw,26px);color:var(--maroon);line-height:1.15;margin-top:2px}
+.dress .lead{font-size:clamp(18px,4.6vw,21px)}
+
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
   .arch path{stroke-dashoffset:0}
@@ -487,6 +507,9 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
     </linearGradient>
     <linearGradient id="ornL" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="82" y2="0"><stop offset="0" stop-color="#c8923a" stop-opacity="0"/><stop offset="1" stop-color="#c8923a"/></linearGradient>
     <linearGradient id="ornR" gradientUnits="userSpaceOnUse" x1="138" y1="0" x2="216" y2="0"><stop offset="0" stop-color="#c8923a"/><stop offset="1" stop-color="#c8923a" stop-opacity="0"/></linearGradient>
+    <linearGradient id="sareeG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0522c"/><stop offset="1" stop-color="#b8321f"/></linearGradient>
+    <linearGradient id="kurtaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe2a6"/><stop offset="1" stop-color="#f2b55a"/></linearGradient>
+    <linearGradient id="coatG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a2a22"/><stop offset="1" stop-color="#4a1010"/></linearGradient>
     <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#7cc457"/>
       <stop offset=".5" stop-color="#3f8f3a"/>
@@ -645,6 +668,7 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
         <div class="date-row"><span class="m">NOVEMBER</span><span class="d">20</span><span class="y">2026</span></div>
         <div class="venue-line"><a href="https://maps.app.goo.gl/JGsZVRCQA99vBMPB9" target="_blank" rel="noopener">RED CORAL, CROSS RIVER MALL</a></div>
         <div class="time-line">7:00 PM onwards</div>
+        <div class="card-dress"><span>DRESS CODE</span><div class="cdr"><div><b>Ladies</b>Saree</div><div><b>Boys</b>Kurta</div><div><b>Gentlemen</b>Coat &amp; Trousers</div></div></div>
       </div>
 
       <div class="knot" aria-hidden="true">
@@ -749,6 +773,59 @@ footer{background:linear-gradient(180deg,transparent,rgba(242,162,58,.10))}
           <div class="t-title">Cake Cutting</div>
           <div class="t-desc">Raise a toast to fifty golden years</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="block dress" id="dress-code">
+    <div class="eyebrow reveal">DRESS CODE</div>
+    <h2 class="reveal">Dress for the Occasion</h2>
+    <div class="orn reveal" aria-hidden="true"><svg viewBox="0 0 220 30"><path d="M4 18 H82" stroke="url(#ornL)" stroke-width="1.2"/><path d="M138 18 H216" stroke="url(#ornR)" stroke-width="1.2"/><circle cx="86" cy="18" r="2" fill="#c8923a"/><circle cx="134" cy="18" r="2" fill="#c8923a"/><use href="#lotus" transform="translate(110 24) scale(.95)" fill="#e0522c" stroke="#8f2a10" stroke-width=".5"/><circle cx="110" cy="25" r="2.2" fill="#c8923a"/></svg></div>
+    <p class="lead reveal">We'd love for everyone to join us dressed in festive style.</p>
+    <div class="dress-grid">
+      <div class="dress-tile reveal">
+        <div class="dress-icon"><svg viewBox="0 0 60 80" aria-hidden="true">
+  <path d="M21 9 H39 L42 20 H18Z" fill="#7a1f1f"/>
+  <path d="M24 9 Q30 14 36 9" fill="none" stroke="#f6c453" stroke-width="1.2"/>
+  <path d="M19 21 H41 L49 74 H11Z" fill="url(#sareeG)"/>
+  <g stroke="#a8321a" stroke-width=".9" opacity=".7"><path d="M25 52 L23 74 M29 52 L28 74 M33 52 L33 74 M37 52 L38 74"/></g>
+  <path d="M11 71 H49" stroke="#f6c453" stroke-width="3"/>
+  <path d="M11 74 H49" stroke="#c8923a" stroke-width="1"/>
+  <path d="M38 9 C47 18 45 42 52 70 L45 72 C41 46 37 30 29 21Z" fill="#f2a23a" opacity=".92"/>
+  <path d="M44 30 C46 44 47 56 50 68" stroke="#7a1f1f" stroke-width="1" stroke-dasharray="1.5 2.5" fill="none"/>
+  <g fill="#f6c453"><circle cx="20" cy="40" r="1.2"/><circle cx="27" cy="34" r="1.2"/><circle cx="18" cy="58" r="1.2"/><circle cx="31" cy="44" r="1.2"/></g>
+</svg></div>
+        <div class="dress-who">Ladies</div>
+        <div class="dress-what">Saree</div>
+      </div>
+      <div class="dress-tile reveal">
+        <div class="dress-icon"><svg viewBox="0 0 60 80" aria-hidden="true">
+  <path d="M21 7 L30 11 L39 7 L52 17 L46 27 L42 23 L44 74 H16 L18 23 L14 27 L8 17Z" fill="url(#kurtaG)" stroke="#a8641a" stroke-width=".8"/>
+  <path d="M26 7 H34 V10 Q30 12 26 10Z" fill="#c8923a"/>
+  <path d="M30 11 V36" stroke="#8f5f1d" stroke-width="1.2"/>
+  <g fill="#7a1f1f"><circle cx="30" cy="16" r="1.2"/><circle cx="30" cy="22" r="1.2"/><circle cx="30" cy="28" r="1.2"/></g>
+  <path d="M25 11 Q30 40 35 11" fill="none" stroke="#7a1f1f" stroke-width=".9" stroke-dasharray="1.5 2"/>
+  <path d="M16 68 H44" stroke="#7a1f1f" stroke-width="1.4" stroke-dasharray="2 2"/>
+  <path d="M18 60 L17 74 M42 60 L43 74" stroke="#fffaf0" stroke-width="1.2"/>
+</svg></div>
+        <div class="dress-who">Boys</div>
+        <div class="dress-what">Kurta</div>
+      </div>
+      <div class="dress-tile reveal">
+        <div class="dress-icon"><svg viewBox="0 0 60 80" aria-hidden="true">
+  <path d="M17 44 H43 L41 77 H32 L30 52 L28 77 H19Z" fill="#2b2320"/>
+  <path d="M30 52 V40" stroke="#4a3d38" stroke-width=".8"/>
+  <path d="M14 10 L24 5 L30 16 L36 5 L46 10 L50 46 H10Z" fill="url(#coatG)" stroke="#3a0d0d" stroke-width=".8"/>
+  <path d="M24 5 L30 16 L36 5 L33 4 L30 10 L27 4Z" fill="#fffaf0"/>
+  <path d="M29 11 L31 11 L32 26 L30 29 L28 26Z" fill="#c8923a"/>
+  <path d="M24 5 L30 32 L21 16 L24 12Z" fill="#561313" stroke="#f6c453" stroke-width=".7"/>
+  <path d="M36 5 L30 32 L39 16 L36 12Z" fill="#561313" stroke="#f6c453" stroke-width=".7"/>
+  <g fill="#f6c453"><circle cx="30" cy="35" r="1.3"/><circle cx="30" cy="40" r="1.3"/></g>
+  <path d="M38 22 h5" stroke="#f6c453" stroke-width="1.2"/>
+</svg></div>
+        <div class="dress-who">Gentlemen</div>
+        <div class="dress-what">Coat &amp; Trousers</div>
       </div>
     </div>
   </section>
